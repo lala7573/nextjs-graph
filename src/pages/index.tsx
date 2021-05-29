@@ -1,14 +1,19 @@
-import Date from "components/date";
+import Link from "next/link";
 import { getSortedNotesData } from "lib/notes";
+import Date from "components/date";
 
 function HomePage({ notes }) {
   return (
     <div>
       <h1>Notes 01</h1>
       {notes.map(({ id, date }: { id: string; date: string }, idx) => (
-        <a key={idx} href={`./notes/${id}`}>
-          <div>{id}</div>
-        </a>
+        <Link key={idx} href={`./notes/${id}`}>
+          <div>
+            <div>
+              {date} - {id}
+            </div>
+          </div>
+        </Link>
       ))}
     </div>
   );

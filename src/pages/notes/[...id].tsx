@@ -4,7 +4,7 @@ import { getAllNotesIds, getNote } from "lib/notes";
 import Date from "components/date";
 import utilStyles from "styles/utils.module.css";
 
-export default function Post({ noteData }) {
+export default function Note({ noteData }) {
   return (
     <Layout>
       <Head>
