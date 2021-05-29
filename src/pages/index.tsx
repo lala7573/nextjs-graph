@@ -4,7 +4,7 @@ import { getSortedNotesData } from "lib/notes";
 function HomePage({ notes }) {
   return (
     <div>
-      <h1>Notes</h1>
+      <h1>Notes 01</h1>
       {notes.map(({ id, date }: { id: string; date: string }, idx) => (
         <a key={idx} href={`./notes/${id}`}>
           <div>{id}</div>
